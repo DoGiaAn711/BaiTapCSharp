@@ -15,7 +15,7 @@ class Phan2BaiTap2 {
             Console.Write("2 diem trung nhau");
         } else {
             Console.WriteLine("Toa do trung diem C: C({0}; {1})", (Ax + Bx) / 2, (Ay + By) / 2);
-            Console.WriteLine("Do dai doan thang = " + (Math.Sqrt(Math.Pow(Math.Abs(Ax - Bx), 2) + Math.Pow(Math.Abs(Ay - By), 2))));
+            Console.WriteLine("Do dai doan thang = {0:0.000}", (Math.Sqrt(Math.Pow(Math.Abs(Ax - Bx), 2) + Math.Pow(Math.Abs(Ay - By), 2))));
         }
     }
 }
