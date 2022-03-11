@@ -24,7 +24,7 @@ namespace learnCSharp {
             anh = Convert.ToInt32(Console.ReadLine());
 
             dtb = (toan * 3 + (van + ly + anh) * 2 + hoa + sinh) / 11;
-            Console.WriteLine("Diem trung binh: " + dtb);
+            Console.WriteLine("Diem trung binh: {0:0.00}", dtb);
         }
     }
 }
