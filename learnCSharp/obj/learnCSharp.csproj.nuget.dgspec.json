@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\boston\\OneDrive - Hanoi University of Science and Technology\\Desktop\\learnCSharp\\learnCSharp.csproj": {}
+    "C:\\Users\\boston\\OneDrive - Hanoi University of Science and Technology\\Desktop\\BaiTapCSharp\\learnCSharp\\learnCSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\boston\\OneDrive - Hanoi University of Science and Technology\\Desktop\\learnCSharp\\learnCSharp.csproj": {
+    "C:\\Users\\boston\\OneDrive - Hanoi University of Science and Technology\\Desktop\\BaiTapCSharp\\learnCSharp\\learnCSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\boston\\OneDrive - Hanoi University of Science and Technology\\Desktop\\learnCSharp\\learnCSharp.csproj",
+        "projectUniqueName": "C:\\Users\\boston\\OneDrive - Hanoi University of Science and Technology\\Desktop\\BaiTapCSharp\\learnCSharp\\learnCSharp.csproj",
         "projectName": "learnCSharp",
-        "projectPath": "C:\\Users\\boston\\OneDrive - Hanoi University of Science and Technology\\Desktop\\learnCSharp\\learnCSharp.csproj",
+        "projectPath": "C:\\Users\\boston\\OneDrive - Hanoi University of Science and Technology\\Desktop\\BaiTapCSharp\\learnCSharp\\learnCSharp.csproj",
         "packagesPath": "C:\\Users\\boston\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\boston\\OneDrive - Hanoi University of Science and Technology\\Desktop\\learnCSharp\\obj\\",
+        "outputPath": "C:\\Users\\boston\\OneDrive - Hanoi University of Science and Technology\\Desktop\\BaiTapCSharp\\learnCSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\boston\\AppData\\Roaming\\NuGet\\NuGet.Config"
