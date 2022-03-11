@@ -1,4 +1,6 @@
 using System;
+using System.Text;
+
 class Phan3BaiTap1 {
     public struct LUANVAN {
         public string maLuanVan;
@@ -9,34 +11,36 @@ class Phan3BaiTap1 {
 
     }    
     public static void output(LUANVAN LV) {
-        Console.WriteLine("\n-----THONG TIN LUAN VAN-----");
-        Console.WriteLine("Ma luan van: \t" + LV.maLuanVan);
-        Console.WriteLine("Ten luan van: \t" + LV.tenLuanVan);
-        Console.WriteLine("Ten sinh vien: \t" + LV.tenSinhVien);
-        Console.WriteLine("Ten giang vien: " + LV.tenGiangVien);
-        Console.WriteLine("Nam thuc hien: \t" + LV.namThucHien);
+        Console.OutputEncoding = Encoding.UTF8; 
+        Console.WriteLine("\n-----THÔNG TIN LUẬN VĂN-----");
+        Console.WriteLine("Mã luận văn: \t" + LV.maLuanVan);
+        Console.WriteLine("Tên luận văn: \t" + LV.tenLuanVan);
+        Console.WriteLine("Tên sinh viên: \t" + LV.tenSinhVien);
+        Console.WriteLine("Tên giảng viên: " + LV.tenGiangVien);
+        Console.WriteLine("Năm thực hiện: \t" + LV.namThucHien);
     }
     public static void input(LUANVAN LV) {
-        Console.Write("Nhap ma luan van: ");
+        Console.OutputEncoding = Encoding.UTF8; 
+        Console.Write("Nhập mã luận văn: ");
         LV.maLuanVan = Console.ReadLine();
         while (LV.maLuanVan.Length > 11) {
-            Console.Write("Nhap lai ma luan van: ");
+            Console.Write("Nhập lại mã luận văn: ");
             LV.maLuanVan = Console.ReadLine();
         }
 
-        Console.Write("Nhap ten luan van: ");
+        Console.Write("Nhập tên luận văn: ");
         LV.tenLuanVan = Console.ReadLine();
 
-        Console.Write("Nhap ten sinh vien: ");
+        Console.Write("Nhập tên sinh viên: ");
         LV.tenSinhVien = Console.ReadLine();
 
-        Console.Write("Nhap ten giang vien: ");
+        Console.Write("Nhập tên giảng viên: ");
         LV.tenGiangVien = Console.ReadLine();
 
-        Console.Write("Nhap nam thuc hien: ");
+        Console.Write("Nhập năm thực hiện: ");
         LV.namThucHien = short.Parse(Console.ReadLine());
         while (LV.namThucHien > 2022) {
-            Console.Write("Nhap lai nam thuc hien: ");
+            Console.Write("Nhập lại năm thực hiện: ");
             LV.namThucHien = short.Parse(Console.ReadLine());
         }
         output(LV);

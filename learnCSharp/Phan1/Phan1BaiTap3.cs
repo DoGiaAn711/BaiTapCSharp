@@ -1,4 +1,6 @@
 using System;
+using System.Text;
+
 class Phan1BaiTap3 {
     public static double CauA(double x) {
         return 2 * Math.Pow(x, 3) + 5 * Math.Pow(x, 2) + 7 * x + 15;
@@ -15,8 +17,9 @@ class Phan1BaiTap3 {
     public static double CauE(double x) {
         return Math.Log10(x + 100);
     }
-    public static void bt3() {  
-        Console.Write("Nhap gia tri cua x: ");
+    public static void bt3() { 
+        Console.OutputEncoding = Encoding.UTF8;  
+        Console.Write("Nhập giá trị của x: ");
         double x = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine("y1 = {0:0.000}", CauA(x));
         Console.WriteLine("y2 = {0:0.000}", CauB(x));

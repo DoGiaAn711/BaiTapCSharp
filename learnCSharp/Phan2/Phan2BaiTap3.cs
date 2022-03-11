@@ -1,19 +1,22 @@
 using System;
+using System.Text;
+
 class Phan2BaiTap3 {
-    public static void bt3() {  
-        Console.Write("Nhap gia tri cua a: ");
+    public static void bt3() { 
+        Console.OutputEncoding = Encoding.UTF8; 
+        Console.Write("Nhập giá trị của a: ");
         double a = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("Nhap gia tri cua b: ");
+        Console.Write("Nhập giá trị của b: ");
         double b = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("Nhap gia tri cua c: ");
+        Console.Write("Nhập giá trị của c: ");
         double c = Convert.ToDouble(Console.ReadLine());
 
         if (a + b > c && a + c > b && b + c > a) {
-            Console.WriteLine("Day la 3 canh cua mot tam giac");
-            Console.WriteLine("Chu vi tam giac = " + (a + b + c));
-            Console.WriteLine("Dien tich tam giac = " + (Math.Sqrt((a + b + c) * (a + b - c) * (b + c - a) * (c + a - b)) / 4));
-        } else Console.WriteLine("Day khong la 3 canh cua mot tam giac");
+            Console.WriteLine("Đây là 3 cạnh của một tam giác.");
+            Console.WriteLine("Chu vi tam giác = " + (a + b + c));
+            Console.WriteLine("Diện tích tam giác = {0:0.000}", (Math.Sqrt((a + b + c) * (a + b - c) * (b + c - a) * (c + a - b)) / 4));
+        } else Console.WriteLine("Đây không là 3 cạnh của một tam giác.");
     }
 }
