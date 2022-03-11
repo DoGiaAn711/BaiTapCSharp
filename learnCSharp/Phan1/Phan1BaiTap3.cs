@@ -18,11 +18,11 @@ class Phan1BaiTap3 {
     public static void bt3() {  
         Console.Write("Nhap gia tri cua x: ");
         double x = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine("y1 = " + CauA(x));
-        Console.WriteLine("y2 = " + CauB(x));
-        Console.WriteLine("y3 = " + CauC(x));
-        Console.WriteLine("y4 = " + CauD(x));
-        Console.WriteLine("y5 = " + CauE(x));
+        Console.WriteLine("y1 = {0:0.000}", CauA(x));
+        Console.WriteLine("y2 = {0:0.000}", CauB(x));
+        Console.WriteLine("y3 = {0:0.000}", CauC(x));
+        Console.WriteLine("y4 = {0:0.000}", CauD(x));
+        Console.WriteLine("y5 = {0:0.000}", CauE(x));
         
     }
 }
