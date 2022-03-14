@@ -3,10 +3,10 @@ using System.Text;
 
 class Phan3BaiTap1 {
     public struct LUANVAN {
-        public string maLuanVan;
-        public string tenLuanVan; 
-        public string tenSinhVien;
-        public string tenGiangVien;
+        public char[] maLuanVan;
+        public char[] tenLuanVan; 
+        public char[] tenSinhVien;
+        public char[] tenGiangVien;
         public short namThucHien;
 
     }    
@@ -19,29 +19,32 @@ class Phan3BaiTap1 {
         Console.WriteLine("Tên giảng viên: " + LV.tenGiangVien);
         Console.WriteLine("Năm thực hiện: \t" + LV.namThucHien);
     }
+
+    public static void readLine(char[] chr, int n, string str) {
+        Console.Write("Nhập " + str + ": ");
+        chr = Console.ReadLine().ToCharArray();
+        while (chr[0] == '\n' || chr.Length > n) {
+            Console.Write("Nhập lại " + str + ": ");
+            chr = Console.ReadLine().ToCharArray();
+        }
+        
+    }
     public static void input(LUANVAN LV) {
         Console.OutputEncoding = Encoding.UTF8; 
-        Console.Write("Nhập mã luận văn: ");
-        LV.maLuanVan = Console.ReadLine();
-        while (LV.maLuanVan.Length > 11) {
-            Console.Write("Nhập lại mã luận văn: ");
-            LV.maLuanVan = Console.ReadLine();
-        }
+        
+        readLine(LV.maLuanVan, 10, "mã luận văn");
+        
+        readLine(LV.tenLuanVan, 100, "tên luận văn");
 
-        Console.Write("Nhập tên luận văn: ");
-        LV.tenLuanVan = Console.ReadLine();
+        readLine(LV.tenSinhVien, 30, "tên sinh viên");
 
-        Console.Write("Nhập tên sinh viên: ");
-        LV.tenSinhVien = Console.ReadLine();
-
-        Console.Write("Nhập tên giảng viên: ");
-        LV.tenGiangVien = Console.ReadLine();
+        readLine(LV.tenGiangVien, 30, "tên giảng viên");
 
         Console.Write("Nhập năm thực hiện: ");
-        LV.namThucHien = short.Parse(Console.ReadLine());
+        LV.namThucHien = Convert.ToInt16(Console.ReadLine());
         while (LV.namThucHien > 2022) {
             Console.Write("Nhập lại năm thực hiện: ");
-            LV.namThucHien = short.Parse(Console.ReadLine());
+            LV.namThucHien = Convert.ToInt16(Console.ReadLine());
         }
         output(LV);
     }
