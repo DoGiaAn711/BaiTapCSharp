@@ -1,5 +1,6 @@
 using System;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 class Phan3BaiTap3 {
     public static void bt3() {  
         Console.WriteLine("\"Chào bạn!\"");
@@ -8,6 +9,8 @@ class Phan3BaiTap3 {
     }
 }
 =======
+=======
+>>>>>>> Stashed changes
     class Phan3BaiTap3 {
         public static void bt3() {
             int n = Convert.ToInt32(Console.ReadLine());
@@ -24,4 +27,7 @@ class Phan3BaiTap3 {
         }
     }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
