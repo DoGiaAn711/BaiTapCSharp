@@ -64,6 +64,10 @@ class Phan3BaiTap2 {
     public static void NhapHopSua(ref HOPSUA hs) {
         Console.Write("Nhập nhãn hiệu: ");
         hs.NhanHieu = Console.ReadLine();
+        while(hs.NhanHieu.Length > 20) {
+            Console.Write("Nhập lại nhãn hiệu: ");
+            hs.NhanHieu = Console.ReadLine();
+        }
 
         Console.Write("Nhập trọng lượng: ");
         hs.TrongLuong = Convert.ToDouble(Console.ReadLine());
