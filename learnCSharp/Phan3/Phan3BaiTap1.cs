@@ -10,7 +10,7 @@ class Phan3BaiTap1 {
         public short namThucHien;
 
     }    
-    public static void output(LUANVAN LV) {
+    public static void output(ref LUANVAN LV) {
         Console.WriteLine("\n-----THÔNG TIN LUẬN VĂN-----");
         Console.WriteLine("Mã luận văn: \t" + LV.maLuanVan);
         Console.WriteLine("Tên luận văn: \t" + LV.tenLuanVan);
@@ -19,46 +19,35 @@ class Phan3BaiTap1 {
         Console.WriteLine("Năm thực hiện: \t" + LV.namThucHien);
     }
     
-    public static void input(LUANVAN LV) {
-        Console.Write("Nhập mã luận văn: ");
-        LV.maLuanVan = Console.ReadLine();
-        while (LV.maLuanVan.Length > 10) {
+    public static void nhap(ref string str1, int n, string str2) {
+        Console.Write("Nhập {0}: ", str2);
+        str1 = Console.ReadLine();
+        while (str1.Length > n) {
             Console.Write("Nhập lại mã luận văn: ");
-            LV.maLuanVan = Console.ReadLine();
+            str1 = Console.ReadLine();
         }
+    }
+    public static void input(ref LUANVAN LV) {
+        nhap(ref LV.maLuanVan, 10, "mã luận văn");
 
-        Console.Write("Nhập tên luận văn: ");
-        LV.tenLuanVan = Console.ReadLine();
-        while (LV.tenLuanVan.Length > 100) {
-            Console.Write("Nhập lại tên luận văn: ");
-            LV.tenLuanVan = Console.ReadLine();
-        }
-
-        Console.Write("Nhập tên sinh viên: ");
-        LV.tenSinhVien = Console.ReadLine();
-        while (LV.tenSinhVien.Length > 30) {
-            Console.Write("Nhập lại tên sinh viên: ");
-            LV.tenSinhVien = Console.ReadLine();
-        }
-
-        Console.Write("Nhập tên giảng viên: ");
-        LV.tenGiangVien = Console.ReadLine();
-        while (LV.tenGiangVien.Length > 30) {
-            Console.Write("Nhập lại tên giảng viên: ");
-            LV.tenGiangVien = Console.ReadLine();
-        }
+        nhap(ref LV.tenLuanVan, 100, "tên luận văn");
+        
+        nhap(ref LV.tenSinhVien, 30, "tên sinh viên");
+        
+        nhap(ref LV.tenGiangVien, 30, "tên giảng viên");
 
         Console.Write("Nhập năm thực hiện: ");
         LV.namThucHien = short.Parse(Console.ReadLine());
-        while (LV.namThucHien > 2022) {
+        while (LV.namThucHien > 2022 || LV.namThucHien < 1900) {
             Console.Write("Nhập lại năm thực hiện: ");
             LV.namThucHien = short.Parse(Console.ReadLine());
         }
-        output(LV);
+        
     }
     public static void bt1() {  
         Console.OutputEncoding = Encoding.UTF8; 
         LUANVAN LV = new LUANVAN();
-        input(LV);
+        input(ref LV);
+        output(ref LV);
     }
 }
