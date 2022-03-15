@@ -4,7 +4,7 @@ using System.Text;
 class PhanMuc {
     public static void PM() {  
         Console.OutputEncoding = Encoding.UTF8; 
-        Console.Write("Nhập phần bài tập muốn làm: ");
+        Console.Write("\nNhập phần bài tập muốn làm: ");
         int n = Convert.ToInt32(Console.ReadLine());
         Console.Write("Nhập bài tập muốn làm: ");
         int m = Convert.ToInt32(Console.ReadLine());
